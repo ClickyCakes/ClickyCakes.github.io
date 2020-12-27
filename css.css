@@ -1,0 +1,15 @@
+* {
+    font-family: sans-serif;
+    background-color:chocolate;
+}
+#cake {
+    position: absolute;
+    top: 40%;
+    left:40%;
+}
+#faster {
+    position: absolute;
+    top: 70%;
+    left:42%;
+    color: black;
+}
