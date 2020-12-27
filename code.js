@@ -37,7 +37,6 @@ function faster() {
         document.getElementById('cost').innerHTML = speed * 10;
         document.getElementById('cakes').innerHTML = cakes.toString()+ ' moolahs';
         alert('You got a better chef!');
-        speed += 1;
     }
     else {
         alert('Sorry! You need more cakes.');
