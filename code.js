@@ -28,6 +28,9 @@ function bake() {
             cake+= 1;
             document.getElementById("cake").src = CakeImgs[cake];
         }
+    if (cakes === 200) {
+    location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }
 };
 function faster() {
     if(cakes >= speed * 10 ) {
