@@ -8,6 +8,9 @@ var speed = 1;
 function bake() {
     document.getElementById('cost').innerHTML = speed * 10;
     cakes+= speed;
+    if (cakes === 200) {
+    location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }
     document.getElementById('cakes').innerHTML = cakes.toString()+ ' moolahs';
         var randomNumber = Math.random() * 100;
         if (randomNumber < bakeThreshold) {
@@ -28,9 +31,6 @@ function bake() {
             cake+= 1;
             document.getElementById("cake").src = CakeImgs[cake];
         }
-    if (cakes === 200) {
-    location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    }
 };
 function faster() {
     if(cakes >= speed * 10 ) {
