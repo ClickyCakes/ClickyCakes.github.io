@@ -21,7 +21,7 @@ function bake() {
         if (cakes >= (level+1)*100) {
             level++
             document.getElementById('audiotag2').play();
-            confetti.start(2500);
+            confetti.start(200);
             if (cake == 2) {
                 cake = -1;
             }
