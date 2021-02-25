@@ -2,15 +2,14 @@ var cakes = 0;
 var level = 0;
 var bakeThreshold = 80;
 var cake = 0
+var ovens = 0;
 var level = 0;
 var CakeImgs = ["https://cdn.pixabay.com/photo/2014/04/02/16/30/cake-307466_1280.png","Pinkcake.png", "cococake.png"]
 var speed = 1;
 function bake() {
     document.getElementById('cost').innerHTML = speed * 10;
+    document.getElementById('costO').innerHTML = ovens+1 * 100;
     cakes+= speed;
-    if (cakes === 200) {
-    location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    }
     document.getElementById('cakes').innerHTML = cakes.toString()+ ' moolahs';
         var randomNumber = Math.random() * 100;
         if (randomNumber < bakeThreshold) {
@@ -24,7 +23,6 @@ function bake() {
         if (cakes >= (level+1)*100) {
             level++
             document.getElementById('audiotag2').play();
-            confetti.start(200);
             if (cake == 2) {
                 cake = -1;
             }
@@ -40,9 +38,21 @@ function faster() {
         document.getElementById('cost').innerHTML = speed * 10;
         document.getElementById('cakes').innerHTML = cakes.toString()+ ' moolahs';
         alert('You got a better chef!');
-        speed += 1;
     }
     else {
         alert('Sorry! You need more cakes.');
+    }
+}
+function MoreOvens() {
+    ovens++
+    document.getElementById('costO').innerHTML = Ovens * 100;
+    Ovens();
+}
+function Ovens() {
+    if(ovens > 0){
+        var CurrentOvens = ovens;
+        while(ovens = CurrentOvens) {
+            setTimeout(bake(), ovens*1000);
+        }
     }
 }
